@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 189, 32, 38;
+  --foreground-rgb:  53, 53, 53;
+  --secondary-foreground: 0, 0, 0;
+  --background-start-rgb: 239, 237, 229;
+  --background-end-rgb: 239, 237, 229;
+}
+
+@media (prefers-color-scheme: white) {
+  :root {
+    --primary: 189, 32, 38;
+    --foreground-rgb:  53, 53, 53;
+    --secondary-foreground: 0, 0, 0;
+    --background-start-rgb: 239, 237, 229;
+    --background-end-rgb: 239, 237, 229;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--foreground-rgb));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--primary));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to top,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+
+    padding: 0 5rem;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
