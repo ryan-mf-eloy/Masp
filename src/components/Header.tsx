@@ -16,7 +16,7 @@ export default function Header() {
   const currentPage = usePathname()
   const formattedCurrentPage = currentPage?.split('/')[1]
 
-  const [open, setOpen] = useState<boolean>(true)
+  const [open, setOpen] = useState<boolean>(false)
 
   return (
     <header className="p-5 select-none pl-[5rem] pr-[5rem] max-md:pr-[3rem] max-md:pl-[3rem] flex w-full flex-row items-center justify-between">
