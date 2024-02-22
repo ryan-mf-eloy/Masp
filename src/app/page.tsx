@@ -105,12 +105,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="overflow-hidden bg-primary flex flex-row max-md:flex-col max-md:min-h-96 max-lg:flex-col max-lg:min-h-96 max-xl:flex-col max-xl:min-h-96 gap-10 min-h-screen p-10">
-          <div className="">
-            <h3 className="text-white font-display max-md:text-3xl max-md:leading-normal max-lg:text-3xl max-lg:leading-normal max-xl:text-3xl max-xl:leading-normal leading-[10rem] uppercase text-[10rem]">
+        <section className="overflow-hidden bg-primary flex flex-row max-md:flex-col max-md:min-h-fit max-md:p-0 max-lg:p-0 max-lg:flex-col max-lg:min-h-96 max-xl:flex-col max-xl:min-h-96 gap-10 min-h-screen p-10">
+          <div>
+            <h3 className="text-white font-display max-md:text-3xl max-md:leading-normal max-lg:pt-10 max-lg:pl-10 max-lg:text-3xl max-lg:leading-normal max-xl:text-3xl max-xl:leading-normal leading-[10rem] uppercase text-[10rem]">
               Seja um amigo
             </h3>
-            <h3 className="text-black font-display uppercase text-6xl max-md:text-3xl max-lg:text-3xl max-xl:text-3xl">
+            <h3 className="text-black font-display uppercase text-6xl max-md:text-3xl max-lg:text-3xl max-xl:text-3xl max-lg:pl-10">
               Masp
             </h3>
           </div>
@@ -133,8 +133,8 @@ export default function Home() {
                 content: <div className="max-w-96">
                   <ul>
                     <li><b>Segunda:</b> Fechado</li>
-                    <li><b>Terça:</b> 10h U+002d 20h (Entrada até as 19h)</li>
-                    <li><b>Quarta U+002d Domingo:</b> 10h U+002d 18h (entrada até as 17h)</li>
+                    <li><b>Terça:</b> 10h - 20h (Entrada até as 19h)</li>
+                    <li><b>Quarta - Domingo:</b> 10h - 18h (entrada até as 17h)</li>
                   </ul>
 
                   <p className="pt-5 pb-5">Com exceção das segundas-feiras, o MASP abre normalmente em dias de feriado, exceto nos dias 24 e 25.12 (feriado de Natal) e nos dias 31.12 e 1.1 (feriado do ano novo), dias em que permanece fechado.  Alterações de horário são comunicadas através das mídias sociais do museu. A entrada no museu é gratuita para pessoas com deficiência e acompanhante.

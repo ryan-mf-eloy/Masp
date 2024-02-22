@@ -123,17 +123,17 @@ export default function Ticket() {
 
   return (
     <main>
-      <section className="flex pt-2 pb-10 flex-row max-md:flex-col max-lg:flex-col max-xl:flex-col justify-between items-center">
-        <div className="w-96">
-          <div className="max-w-96 min-w-96 min-h-[42rem] flex flex-col">
-            <div className="p-10 flex-2 min-h-[32rem] min-w-96 bg-black">
-             <h4 className="text-primary font-display font-bold text-4xl uppercase text-center">
+      <section className="flex pt-2 pb-10 flex-row max-xl:flex-col-reverse justify-between items-center">
+        <div className="w-96 max-md:w-80">
+          <div className="max-w-96 w-full min-h-[42rem] flex flex-col">
+            <div className="p-10 flex-2 min-h-[32rem] w-full bg-black">
+             <h4 className="text-primary max-md:text-3xl font-display font-bold text-4xl uppercase text-center">
                 Masp
               </h4>
-              <h5 className="text-white font-body font-thin text-2xl text-center">
+              <h5 className="text-white font-body font-thin text-2xl max-md:text-lg max-md:mb-5 text-center">
                 Exposições 2024
               </h5>
-              <div className="flex flex-row gap-5 text-center border-b-2 border-white border-opacity-10 p-10">
+              <div className="flex flex-row gap-5 text-center border-b-2 border-white border-opacity-10 p-10 max-md:p-2">
                 <h6 className="text-white font-body font-thin text-lg">
                   <b className="font-bold flex gap-2 items-center uppercase pb-1">
                     <GrCalendar size={15} />
@@ -172,7 +172,7 @@ export default function Ticket() {
               
             </div>
 
-            <div className="flex-1 flex items-center justify-center min-w-96 min-h-48 bg-black border-t-[15px] border-dashed border-background"
+            <div className="flex-1 flex items-center justify-center w-full min-h-48 bg-black border-t-[15px] border-dashed border-background"
               style={{
                 backgroundImage: `
                   linear-gradient(to bottom, #000000, #0000002a),
@@ -188,8 +188,8 @@ export default function Ticket() {
           </div>
         </div>
 
-        <div className="w-full min-h-screen max-md:min-h-fit max-lg:min-h-fit max-xl:min-h-fit">
-        <div className="flex flex-row gap-2 max-md:justify-center max-md:pt-10 max-md:pl-0 max-lg:justify-center max-lg:pt-10 max-lg:pl-0 max-xl:justify-center max-xl:pt-10 max-xl:pl-0 items-center justify-end pl-10">
+        <div className="w-full min-h-screen max-xl:min-h-fit">
+        <div className="flex flex-row gap-2 max-xl:justify-center max-xl:pt-10 max-xl:pl-0 items-center justify-end pl-10">
             <Button type="outline" onClick={() => handleStep('prev')}>
               <MdArrowLeft size={30} />
               Anterior
@@ -212,15 +212,15 @@ export default function Ticket() {
           </div>
 
           { currentStep === 1 &&
-            <div className="flex  flex-col min-h-screen w-full pl-10 pr-10 max-md:p-0 max-md:min-h-fit max-lg:min-h-fit max-md:justify-center max-md:items-center max-lg:justify-center max-lg:items-center max-xl:justify-center max-xl:items-center">
-              <h1 className="text-3xl font-display uppercase font-bold max-md:pl-10 max-md:pr-10">Escolha uma data</h1>
+            <div className="flex flex-col min-h-screen w-full pl-10 pr-10 max-md:p-0 max-lg:min-h-fit max-xl:justify-center max-xl:items-center max-xl:mb-10">
+              <h1 className="text-3xl font-display uppercase font-bold max-md:p-5 max-md:text-2xl">Escolha uma data</h1>
               <Calendar selectedDate={selectedDate!} onDate={(_, date) => setSelectedDate(date)} />
             </div>
           }
           { currentStep === 2 &&
-            <div className="min-h-screen w-full pl-10 pr-10 max-md:min-h-fit max-lg:min-h-fit">
-              <h1 className="text-3xl font-display uppercase font-bold">Escolha um horário</h1>
-              <p className="text-lg pb-8">Esses são os horários disponíveis para essa data</p>
+            <div className="min-h-screen w-full pl-10 pr-10 max-lg:min-h-fit max-md:p-0 max-xl:mb-10 max-xl:text-center">
+              <h1 className="text-3xl font-display uppercase font-bold max-md:text-2xl max-md:pt-5">Escolha um horário</h1>
+              <p className="text-lg pb-8 max-md:pb-5">Esses são os horários disponíveis para essa data</p>
               <TimePicker
                 onSelect={(_, hour) => setSelectedHour(hour)}
                 selectedHour={selectedHour!}
@@ -244,8 +244,8 @@ export default function Ticket() {
             </div>
           }
           { currentStep === 3 &&
-            <div className="min-h-96 w-full pl-10 pr-10">
-              <h1 className="text-3xl font-display uppercase font-bold">Escolha um ou mais ingressos</h1>
+            <div className="min-h-96 w-full pl-10 pr-10 max-md:p-0 max-md:mb-10">
+              <h1 className="text-3xl font-display uppercase font-bold max-md:pt-5 max-md:pb-5 max-md:text-2xl max-xl:text-center">Escolha um ou mais ingressos</h1>
 
               <motion.div
                 initial={{ y: 100, opacity: 0 }}
@@ -264,7 +264,7 @@ export default function Ticket() {
         </div>
       </section>
 
-      <Image className="w-full" src={maspImage.src} alt="Masp" width={1000} height={1000} />
+      <Image className="w-full max-lg:hidden" src={maspImage.src} alt="Masp" width={1000} height={1000} />
     </main>
   );
 }

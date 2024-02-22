@@ -38,7 +38,7 @@ module.exports = {
       'secondary-foreground': "#000000",
 
       'primary': '#bd2026',
-      'primary-shadow': '#c0392b',
+      'primary-shadow': '#A31C20',
     },
     fontFamily: {
       body: ['Inter', 'sans-serif'],

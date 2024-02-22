@@ -39,7 +39,7 @@ const config: Config = {
       'secondary-foreground': "#000000",
 
       'primary': '#bd2026',
-      'primary-shadow': '#c0392b',
+      'primary-shadow': '#A31C20',
 
     },
     fontFamily: {

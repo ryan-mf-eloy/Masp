@@ -43,9 +43,9 @@ export default function TimePicker({
       exit={{ y: 100, opacity: 0 }}
       className="flex flex-row gap-5 items-center justify-start flex-wrap select-none"
     >
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full max-lg:items-center max-lg:justify-center">
         <h6 className="text-lg font-bold font-display pb-2">Manhã</h6>
-        <div className="flex flex-row gap-5 flex-wrap">
+        <div className="flex flex-row gap-5 flex-wrap max-lg:justify-center">
           {
             times.morning.map((time, index) => {
               const isSelectedHour = selectedHour === time
@@ -64,9 +64,9 @@ export default function TimePicker({
         </div>
       </div>
 
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full max-lg:items-center max-lg:justify-center">
         <h6 className="text-lg font-bold font-display pb-2 mt-10">Tarde</h6>
-        <div className="flex flex-row gap-5 flex-wrap">
+        <div className="flex flex-row gap-5 flex-wrap max-lg:justify-center">
           {
             times.afternoon.map((time, index) => {
               const isSelectedHour = selectedHour === time
@@ -85,9 +85,9 @@ export default function TimePicker({
         </div>
       </div>
 
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full max-lg:items-center max-lg:justify-center">
         <h6 className="text-lg font-bold font-display pb-2 mt-10">Noite</h6>
-        <div className="flex flex-row gap-5 flex-wrap">
+        <div className="flex flex-row gap-5 flex-wrap max-lg:justify-center">
           {
             times.evening.map((time, index) => {
               const isSelectedHour = selectedHour === time

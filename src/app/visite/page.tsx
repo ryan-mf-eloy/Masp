@@ -24,8 +24,8 @@ export default function Visit() {
                 content: <div className="max-w-96">
                   <ul>
                     <li><b>Segunda:</b> Fechado</li>
-                    <li><b>Terça:</b> 10h U+002d 20h (Entrada até as 19h)</li>
-                    <li><b>Quarta U+002d Domingo:</b> 10h U+002d 18h (entrada até as 17h)</li>
+                    <li><b>Terça:</b> 10h - 20h (Entrada até as 19h)</li>
+                    <li><b>Quarta - Domingo:</b> 10h - 18h (entrada até as 17h)</li>
                   </ul>
 
                   <p className="pt-5 pb-5">Com exceção das segundas-feiras, o MASP abre normalmente em dias de feriado, exceto nos dias 24 e 25.12 (feriado de Natal) e nos dias 31.12 e 1.1 (feriado do ano novo), dias em que permanece fechado.  Alterações de horário são comunicadas através das mídias sociais do museu. A entrada no museu é gratuita para pessoas com deficiência e acompanhante.

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'Museu de Arte de São Paulo',
     card: 'summary',
     creator: '@maspbr',
-    // images: ['https://assets.masp.org.br/images/img_01_masp_preto_branco.jpg'],
+    images: ['https://assets.masp.org.br/images/img_01_masp_preto_branco.jpg'],
   },
   openGraph: {
     title: 'MASP',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     url: 'https://www.masp.org.br',
     siteName: 'MASP',
-    // images: ["https://assets.masp.org.br/images/img_01_masp_preto_branco.jpg"],
+    images: ["https://assets.masp.org.br/images/img_01_masp_preto_branco.jpg"],
   },
 };
 

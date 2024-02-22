@@ -52,7 +52,7 @@ export default function Calendar() {
       img: item5Image.src
     }
   ]
-  const [selection, setSelections] = useState<string[]>([])
+  const [selection, setSelections] = useState<string[]>(['Exposições'])
   const [items, setItems] = useState<TimelineItem[]>(APIResponseItems)
 
   const handleSelecions = useCallback((
@@ -83,33 +83,34 @@ export default function Calendar() {
   return (
     <main>
       <section className="flex pt-10 flex-row max-md:flex-col items-start justify-center gap-10">
-        <div className="w-full flex flex-col items-start justify-start">
-          <h3 className="text-3xl max-md:text-2xl font-bold font-display uppercase">
+        <div className="w-full max-lg:max-w-96 flex flex-col items-start justify-start">
+          <h3 className="text-3xl max-lg:text-2xl font-bold font-display uppercase">
             Programação
           </h3>
 
           <div className="flex items-center justify-start w-full pt-3 pb-3">
-            <InputCheckbox isChecked={true} onChange={handleSelecions} id="exposicoes" value="Exposições" labelText="Exposições" labelClassName="text-2xl max-md:text-lg font-bold uppercase" />
+            <InputCheckbox isChecked={true} onChange={handleSelecions} id="exposicoes" value="Exposições" labelText="Exposições" labelClassName="text-2xl max-lg:text-lg font-bold uppercase" />
           </div>
           <div className="flex items-center justify-start w-full pt-3 pb-3">
-            <InputCheckbox onChange={handleSelecions}  id="oficinas" value="Oficinas" labelText="Oficinas" labelClassName="text-2xl max-md:text-lg font-bold uppercase" />
+            <InputCheckbox onChange={handleSelecions} id="oficinas" value="Oficinas" labelText="Oficinas" labelClassName="text-2xl max-lg:text-lg font-bold uppercase" />
           </div>
           <div className="flex items-center justify-start w-full pt-3 pb-3">
-            <InputCheckbox onChange={handleSelecions}  id="seminarios" value="Seminários" labelText="Seminários" labelClassName="text-2xl max-md:text-lg font-bold uppercase" />
+            <InputCheckbox onChange={handleSelecions} id="seminarios" value="Seminários" labelText="Seminários" labelClassName="text-2xl max-lg:text-lg font-bold uppercase" />
           </div>
           <div className="flex items-center justify-start w-full pt-3 pb-3">
-            <InputCheckbox onChange={handleSelecions}  id="dialogos" value="Diálogos" labelText="Diálogos no acervo" labelClassName="text-2xl max-md:text-lg font-bold uppercase" />
+            <InputCheckbox onChange={handleSelecions} id="dialogos" value="Diálogos" labelText="Diálogos no acervo" labelClassName="text-2xl max-lg:text-lg font-bold uppercase" />
           </div>
           <div className="flex items-center justify-start w-full pt-3 pb-3">
-            <InputCheckbox onChange={handleSelecions}  id="eventos" value="Eventos" labelText="Espetáculo e Eventos" labelClassName="text-2xl max-md:text-lg font-bold uppercase" />
+            <InputCheckbox onChange={handleSelecions} id="eventos" value="Eventos" labelText="Espetáculo e Eventos" labelClassName="text-2xl max-lg:text-lg font-bold uppercase" />
           </div>
           <div className="flex items-center justify-start w-full pt-3 pb-3">
-            <InputCheckbox onChange={handleSelecions}  id="cursos" value="Cursos" labelText="Cursos" labelClassName="text-2xl  max-md:text-lg font-bold uppercase" />
+            <InputCheckbox onChange={handleSelecions} id="cursos" value="Cursos" labelText="Cursos" labelClassName="text-2xl max-lg:text-lg font-bold uppercase" />
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           <Timeline
+            className="max-md:-ml-3"
             items={items}
           />
         </div>

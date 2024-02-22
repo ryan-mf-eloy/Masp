@@ -13,7 +13,7 @@ export default function Nav() {
           {
             formattedCurrentPage
               ?
-              <h1 className="text-primary -tracking-widest font-bold uppercase text-[8rem] max-md:text-5xl max-2xl:text-6xl font-display">
+              <h1 className="text-primary -tracking-widest font-bold uppercase text-[8rem] max-md:text-4xl max-2xl:text-6xl font-display">
                 {formattedCurrentPage}
               </h1>
               : 
