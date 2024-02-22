@@ -7,24 +7,68 @@ import Button from "@/components/Button";
 import ImagesSlider from "@/components/Slider";
 import Accordion from "@/components/Accordion";
 import Newsletter from "@/components/Newsletter";
-
+import Timeline, { TimelineItem } from "@/components/Timeline";
 /**
- * Icon
+ * Icons
  */
 import { GrCalendar } from "react-icons/gr";
 /**
  * Assets
  */
 import sliderImage1 from '../../public/assets/images/masp-5.png';
-import sliderImage2 from '../../public/assets/images/masp-9.jpg';
+import sliderImage2 from '../../public/assets/images/masp-1.jpg';
 import sliderImage3 from '../../public/assets/images/masp-3.png';
-import sliderImage4 from '../../public/assets/images/masp-1.jpg'
+import sliderImage4 from '../../public/assets/images/masp-9.jpg'
 import sliderImage5 from '../../public/assets/images/masp-2.jpg';
 
-import secondSectionImage from '../../public/assets/images/masp-10.jpg';
+import item1Image from '../../public/assets/images/masp-10.jpg'
+import item2Image from '../../public/assets/images/masp-9.jpg'
+import item3Image from '../../public/assets/images/masp-12.jpg'
+import item4Image from '../../public/assets/images/masp-2.jpg'
+import item5Image from '../../public/assets/images/masp-3.png'
+
 import lastSectionImage from '../../public/assets/images/masp-11.jpg';
 
+
 export default function Home() {
+  const items: TimelineItem[] = [
+    {
+      title: "GRAN FURY: ARTE NÃO É O BASTANTE",
+      date: "23.02 – 09.06.2024",
+      description: "O MASP apresenta a mostra Gran Fury: arte não é o bastante, que ocupa a galeria localizada no 1º subsolo do museu. Com curadoria de André Mesquita, curador, MASP, e assistência de David Ribeiro, supervisor, MASP, a exposição reúne 77 obras, entre elas fotocópias e impressões digitais sobre papel. A mostra discute os limites e os alcances das campanhas gráficas do coletivo Gran Fury, bem como a ideia da arte como estratégia no campo ativista, impulsionado por pessoas queer, para ampliar a consciência sobre o HIV/aids. ",
+      type: 'Exposições',
+      img: item1Image.src
+    },
+    {
+      title: "SALA DE VÍDEO: MASI MAMANI / BARTOLINA XIXA",
+      date: "23.02 – 14.04.2024",
+      description: "O MASP apresenta a Sala de vídeo: Masi Mamani / Bartolina Xixa, que exibe os vídeos Ramita Seca, La colonialidad permanente (2019), Bartolina Xixa, una drag de La Puna (2019) e Crudo (2020). Com curadoria de Matheus de Andrade, assistente curatorial, MASP, as obras registram uma série de performances da artista argentina, as quais denunciam estruturas coloniais na intersecção entre sua pesquisa antropológica, experiências pessoais e expressão artística.",
+      type: 'Exposições',
+      img: item2Image.src
+    },
+    {
+      title: "SALA DE VÍDEO: CECILIA VICUÑA",
+      date: "15.12.2023 – 11.02.2024",
+      description: "O MASP apresenta a Sala de vídeo: Cecilia Vicuña, que exibe o vídeo Quipu Mapocho (2017). Com curadoria de Kássia Borges, curadora-adjunta de arte indígena, MASP, a obra registra uma série de performances da artista ao longo do rio Mapocho, no Chile, que trazem perspectivas sobre a vida, a morte, a cultura, a memória e a história deste território.",
+      type: 'Exposições',
+      img: item3Image.src
+    },
+    {
+      title: "HISTÓRIAS INDÍGENAS",
+      date: "20.10.2023 – 25.02.2024",
+      description: "O MASP em colaboração com o Kode Bergen Art Museum organiza uma grande exposição coletiva intitulada Histórias indígenas.",
+      type: 'Exposições',
+      img: item4Image.src
+    },
+    {
+      title: "ACERVO EM TRANSFORMAÇÃO",
+      date: "DESDE 2015",
+      description: "Acervo em transformação é o título da exposição de longa duração da coleção do MASP. As obras são instaladas nos cavaletes de cristal — placas de vidro encaixadas em blocos de concreto — que ficam dispostos em fileiras sem divisórias na sala ampla do segundo andar do museu. O espaço aberto, fluido e permeável da galeria oferece múltiplas possibilidades de acesso e de leitura, eliminando hierarquias e roteiros predeterminados. Retirar as telas das paredes e colocá-las nos cavaletes possibilita ao visitante caminhar entre elas, como em uma floresta de obras que parecem estar suspensas no ar.",
+      type: 'Exposições',
+      img: item5Image.src
+    }
+  ]
+
   return (
     <>
       <main>
@@ -41,20 +85,23 @@ export default function Home() {
           } />
         </section>
 
-        <section className="overflow-hidden bg-black flex items-center justify-center min-h-screen">
-          <div className="flex-1 min-h-screen bg-background p-20 flex flex-col gap-5 items-center justify-center">
-            <p>O MASP apresenta a mostra Gran Fury: arte não é o bastante, que ocupa a galeria localizada no 1o subsolo do museu. Com curadoria de André Mesquita, curador, MASP, e assistência de David Ribeiro, supervisor, MASP, a exposição reúne 77 obras, entre elas fotocópias e impressões digitais sobre papel. A mostra discute os limites e os alcances das campanhas gráficas do coletivo Gran Fury, bem como a ideia da arte como estratégia no campo ativista, impulsionado por pessoas queer, para ampliar a consciência sobre o HIV/aids.</p>
-
-            <p>Gran Fury (Nova York, 1988—1995) foi um coletivo de artistas considerado referência para as práticas de ativismo artístico das décadas de 1980 e 1990, que emergiu a partir da organização ACT UP (AIDS Coalition to Unleash Power) [Coalizão da aids para libertar o poder], composta por indivíduos e grupos de afinidade dedicados a tornar criticamente público o silêncio e a negligência do governo dos Estados Unidos em relação ao HIV/aids. Gran Fury produziu campanhas gráficas e intervenções públicas em torno das questões relacionadas à crise do hiv/AIDS, servindo visualmente ao ACT UP em protestos e ações de desobediência civil. O coletivo encerrou suas atividades em 1995, e seu arquivo encontra-se na New York Public Library.</p>
-
-            <p>Em boa parte de sua trajetória, o Gran Fury contou, em sua formação, com Avram Finkelstein, Donald Moffett, John Lindell, Loring McAlpin, Mark Simpson (1950-1996), Marlene McCarty, Michael Nesline, Richard Elovich, Robert Vazquez-Pacheco e Tom Kalin. O grupo se autodescrevia como “um bando de indivíduos unidos na raiva e comprometidos a explorar o poder da arte para acabar com a crise da aids”. Seus membros recusavam-se a se assumir como artistas ou a aparecer como criadores individuais e desejavam escapar dos espaços de arte consagrados.</p>
-
-            <a href="https://www.masp.org.br/exposicoes/gran-fury-arte-nao-e-o-bastante" target="_blank">
-              <Button type="outline">Continuar lendo...</Button>
-            </a>
+        <section className="overflow-hidden flex items-center justify-center min-h-screen">
+          <div className="flex-1 min-h-screen bg-background p-20 flex flex-col items-center justify-center">
+            <Timeline
+              items={items}
+            />
           </div>
           <div className="overflow-hidden min-h-screen flex-1 flex items-center justify-center">
-            <Image className="scale-150" src={secondSectionImage.src} alt="Gran Fury: arte não é o bastante" width={1000} height={100} />
+            <ImagesSlider
+              className="min-h-screen"
+              images={[
+                item1Image.src,
+                item2Image.src,
+                item3Image.src,
+                item4Image.src,
+                item5Image.src
+              ]
+            } />
           </div>
         </section>
 

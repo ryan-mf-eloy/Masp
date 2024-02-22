@@ -47,9 +47,6 @@ export default function Nav() {
               <li className="cursor-pointer transition-[1500ms] hover:text-primary">
               <Link href="/visite" locale="pt-BR">Visite</Link>
               </li>
-              <li className="cursor-pointer transition-[1500ms] hover:text-primary">
-                <a href="/exposicoes">Exposições</a>
-              </li>
             </ul>
           </div>
         </div>

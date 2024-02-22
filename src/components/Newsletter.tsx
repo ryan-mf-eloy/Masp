@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 
 import Button from "./Button";
-import Input from "./Input";
+import InputText from "./InputText";
 
 export default function Newsletter() {
   const [subscribed, setSubscribed] = useState<boolean>(false)
@@ -31,7 +31,7 @@ export default function Newsletter() {
           }
 
           <div className="flex flex-row gap-1">
-            <Input className="w-96 min-h-14" placeholder="Digite seu e-mail" type="email" name="email" required={true} />
+            <InputText className="w-96 min-h-14" placeholder="Digite seu e-mail" type="email" name="email" required={true} />
             <Button type="primary">Inscrever-se</Button>
           </div>
         </form>
