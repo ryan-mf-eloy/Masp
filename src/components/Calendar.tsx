@@ -79,31 +79,31 @@ export default function Calendar({
   }, [initialCurrentMonthValue])
 
   return(
-    <div className="flex flex-col items-center select-none justify-center w-fit border-2 p-5 pt-3">
+    <div className="flex overflow-hidden flex-col items-center select-none justify-center w-fit border-2 p-5 pt-3 max-md:p-1">
       <h3 className="text-2xl text-center uppercase font-bold w-fit pb-2 flex flex-row items-center justify-start">
         <MdArrowLeft
           onClick={() => handleCurrentMonth('prev')}
-          className="hover:text-primary cursor-pointer"
-          size={50} />
+          className="hover:text-primary cursor-pointer max-md:text-[35px] text-[50px]"
+        />
         
-        <span className="min-w-36">
+        <span className="min-w-36 max-md:text-lg">
           {months[currentMonth]}
         </span>
 
         <MdArrowRight
           onClick={() => handleCurrentMonth('next')}
-          className="hover:text-primary cursor-pointer"
-          size={50} />
+          className="hover:text-primary cursor-pointer max-md:text-[35px] text-[50px]"
+        />
       </h3>
 
       <div className="grid grid-cols-7 flex-row gap-2 text-center w-fit">
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Segunda</span>
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Terça</span>
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Quarta</span>
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Quinta</span>
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Sexta</span>
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Sábado</span>
-        <span className="text-white flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Domingo</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">S</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">T</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Q</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Q</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">S</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">S</span>
+        <span className="text-white max-md:text-[0.8rem] max-md:p-1 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">D</span>
       </div>
       
       <motion.div
@@ -135,7 +135,7 @@ export default function Calendar({
                 exit={{ y: 100, opacity: 0 }}
                 key={index}
                 onClick={(event) => onDate(event, date)}
-                className={`hover:text-primary hover:bg-primary hover:bg-opacity-5 hover:border-primary cursor-pointer p-10 border-2 border-foregorund flex text-3xl items-center justify-center w-28 h-8 font-bold font-display uppercase ${selecteDateStyle}`}>
+                className={`hover:text-primary overflow-hidden bg-background hover:bg-primary hover:bg-opacity-5 hover:border-primary cursor-pointer p-10 border-2 border-foregorund flex text-3xl max-md:text-lg max-md:p-0 max-md:w-12 max-md:h-12 max-lg:text-2xl max-lg:p-5 max-lg:w-16 max-lg:h-12 items-center justify-center w-28 h-8 font-bold font-display uppercase ${selecteDateStyle}`}>
                   {currentDay}
                 </motion.span>
               )

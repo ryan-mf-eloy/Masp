@@ -123,7 +123,7 @@ export default function Ticket() {
 
   return (
     <main>
-      <section className="flex pt-2 pb-10 flex-row justify-between items-center">
+      <section className="flex pt-2 pb-10 flex-row max-md:flex-col max-lg:flex-col max-xl:flex-col justify-between items-center">
         <div className="w-96">
           <div className="max-w-96 min-w-96 min-h-[42rem] flex flex-col">
             <div className="p-10 flex-2 min-h-[32rem] min-w-96 bg-black">
@@ -188,8 +188,8 @@ export default function Ticket() {
           </div>
         </div>
 
-        <div className="w-full min-h-screen">
-        <div className="flex flex-row gap-2 items-center justify-end pl-10">
+        <div className="w-full min-h-screen max-md:min-h-fit max-lg:min-h-fit max-xl:min-h-fit">
+        <div className="flex flex-row gap-2 max-md:justify-center max-md:pt-10 max-md:pl-0 max-lg:justify-center max-lg:pt-10 max-lg:pl-0 max-xl:justify-center max-xl:pt-10 max-xl:pl-0 items-center justify-end pl-10">
             <Button type="outline" onClick={() => handleStep('prev')}>
               <MdArrowLeft size={30} />
               Anterior
@@ -212,13 +212,13 @@ export default function Ticket() {
           </div>
 
           { currentStep === 1 &&
-            <div className="min-h-screen w-full pl-10 pr-10">
-              <h1 className="text-3xl font-display uppercase font-bold">Escolha uma data</h1>
+            <div className="flex  flex-col min-h-screen w-full pl-10 pr-10 max-md:p-0 max-md:min-h-fit max-lg:min-h-fit max-md:justify-center max-md:items-center max-lg:justify-center max-lg:items-center max-xl:justify-center max-xl:items-center">
+              <h1 className="text-3xl font-display uppercase font-bold max-md:pl-10 max-md:pr-10">Escolha uma data</h1>
               <Calendar selectedDate={selectedDate!} onDate={(_, date) => setSelectedDate(date)} />
             </div>
           }
           { currentStep === 2 &&
-            <div className="min-h-screen w-full pl-10 pr-10">
+            <div className="min-h-screen w-full pl-10 pr-10 max-md:min-h-fit max-lg:min-h-fit">
               <h1 className="text-3xl font-display uppercase font-bold">Escolha um horário</h1>
               <p className="text-lg pb-8">Esses são os horários disponíveis para essa data</p>
               <TimePicker
@@ -251,7 +251,7 @@ export default function Ticket() {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{y: 0, opacity: 1 }}
                 exit={{ y: 100, opacity: 0 }}
-                className="flex flex-row flex-wrap justify-start items-center gap-5 pt-2 overflow-auto max-h-screen"
+                className="flex flex-row flex-wrap justify-start items-center gap-5 pt-2 overflow-auto max-h-screen max-md:max-h-full max-md:justify-center max-lg:justify-center max-xl:justify-center max-lg:max-h-full max-xl:max-h-full"
               >
                 <TicketList
                   items={tickets}

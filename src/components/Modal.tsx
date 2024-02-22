@@ -18,7 +18,7 @@ export default function Modal({ isToggled, setToggled, children, style }: any){
             initial={{y: 10, x: "-50%", opacity: 0}}
             animate={{y: 50, opacity: 1}}
             exit={{ y: 100, opacity: 0 }}
-            className="bg-white -top-12 left-[30rem] shadow-lg min-h-[35rem] max-w-[60rem] w-full flex flex-col gap-5 p-10 items-center justify-start relative"
+            className="bg-white -top-12 left-[30rem] shadow-lg min-h-[35rem] max-w-[60rem] max-lg:left-[25rem] max-lg:max-w-[50rem] max-md:left-[20rem] max-md:max-w-[40rem] max-sm:left-[17.5rem] max-sm:max-w-[35rem] max-[500px]:left-[14.9rem] max-[500px]:max-w-[30rem] w-full flex flex-col gap-5 p-10 items-center justify-start relative"
             style={style}
             onClick={(event) => event.stopPropagation()}
           >

@@ -13,7 +13,7 @@ export default function Visit() {
   return (
     <main>
       <section className="pb-5">
-        <iframe className="w-full h-screen border-2 border-foreground hover:border-black" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3657.180465025963!2d-46.6565244!3d-23.5619612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sMuseu%20de%20Arte%20de%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand!5e0!3m2!1spt-BR!2sbr!4v1708538203778!5m2!1spt-BR!2sbr" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe className="w-full h-screen max-md:h-96 border-2 border-foreground hover:border-black" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3657.180465025963!2d-46.6565244!3d-23.5619612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sMuseu%20de%20Arte%20de%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand!5e0!3m2!1spt-BR!2sbr!4v1708538203778!5m2!1spt-BR!2sbr" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </section>
 
       <section>

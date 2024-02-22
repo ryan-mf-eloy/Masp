@@ -14,7 +14,7 @@ export function Social({
   className?: string
 }) {
     return (
-      <div className="flex flex-row gap-5 items-center justify-start">
+      <div className="flex flex-row gap-5 max-[1050px]:justify-center items-center justify-start">
         <a target="_blank" href="https://www.twitter.com/maspmuseu" className={`border-inherit hover:text-black border-4 flex p-2 w-15 h-15 ${className}`}>
           <GrTwitter size={30} />
         </a>

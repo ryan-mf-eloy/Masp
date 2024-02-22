@@ -45,7 +45,7 @@ export default function TimePicker({
     >
       <div className="flex flex-col w-full">
         <h6 className="text-lg font-bold font-display pb-2">Manhã</h6>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 flex-wrap">
           {
             times.morning.map((time, index) => {
               const isSelectedHour = selectedHour === time
@@ -55,7 +55,7 @@ export default function TimePicker({
                 <span
                   key={index}
                   onClick={(event) => onSelect(event, time)}
-                  className={`hover:bg-black font-bold cursor-pointer ${blackBackground} flex items-center justify-center p-2 min-w-20 max-h-8 text-center text-white`}>
+                  className={`hover:bg-black max-md:p-5 max-lg:p-5 font-bold cursor-pointer ${blackBackground} flex items-center justify-center p-2 min-w-20 max-h-8 text-center text-white`}>
                   {time}
                 </span>
               )
@@ -66,7 +66,7 @@ export default function TimePicker({
 
       <div className="flex flex-col w-full">
         <h6 className="text-lg font-bold font-display pb-2 mt-10">Tarde</h6>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 flex-wrap">
           {
             times.afternoon.map((time, index) => {
               const isSelectedHour = selectedHour === time
@@ -76,7 +76,7 @@ export default function TimePicker({
                 <span
                   key={index}
                   onClick={(event) => onSelect(event, time)}
-                  className={`hover:bg-black font-bold cursor-pointer ${blackBackground} flex items-center justify-center p-2 min-w-20 max-h-8 text-center text-white`}>
+                  className={`hover:bg-black max-md:p-5 max-lg:p-5 font-bold cursor-pointer ${blackBackground} flex items-center justify-center p-2 min-w-20 max-h-8 text-center text-white`}>
                   {time}
                 </span>
               )
@@ -87,7 +87,7 @@ export default function TimePicker({
 
       <div className="flex flex-col w-full">
         <h6 className="text-lg font-bold font-display pb-2 mt-10">Noite</h6>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 flex-wrap">
           {
             times.evening.map((time, index) => {
               const isSelectedHour = selectedHour === time
@@ -97,7 +97,7 @@ export default function TimePicker({
                 <span
                   key={index}
                   onClick={(event) => onSelect(event, time)}
-                  className={`hover:bg-black font-bold cursor-pointer ${blackBackground} flex items-center justify-center p-2 min-w-20 max-h-8 text-center text-white`}>
+                  className={`hover:bg-black max-md:p-5 max-lg:p-5 font-bold cursor-pointer ${blackBackground} flex items-center justify-center p-2 min-w-20 max-h-8 text-center text-white`}>
                   {time}
                 </span>
               )

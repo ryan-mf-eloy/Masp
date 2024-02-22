@@ -74,7 +74,7 @@ export default function Home() {
       <main>
         <section>
           <ImagesSlider
-            className="min-h-screen"
+            className="min-h-screen max-md:min-h-72 max-lg:min-h-[40rem]"
             images={[
               sliderImage1.src,
               sliderImage2.src,
@@ -86,12 +86,12 @@ export default function Home() {
         </section>
 
         <section className="overflow-hidden flex items-center justify-center min-h-screen">
-          <div className="flex-1 min-h-screen bg-background p-20 flex flex-col items-center justify-center">
+          <div className="flex-1 min-h-screen bg-background p-20 max-md:p-2 flex flex-col items-center justify-center">
             <Timeline
               items={items}
             />
           </div>
-          <div className="overflow-hidden min-h-screen flex-1 flex items-center justify-center">
+          <div className="overflow-hidden max-lg:hidden min-h-screen flex-1 flex items-center justify-center">
             <ImagesSlider
               className="min-h-screen"
               images={[
@@ -105,21 +105,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="overflow-hidden bg-primary flex flex-row gap-10 min-h-screen p-10">
+        <section className="overflow-hidden bg-primary flex flex-row max-md:flex-col max-md:min-h-96 max-lg:flex-col max-lg:min-h-96 max-xl:flex-col max-xl:min-h-96 gap-10 min-h-screen p-10">
           <div className="">
-            <h3 className="text-white font-display leading-[10rem] uppercase text-[10rem]">
+            <h3 className="text-white font-display max-md:text-3xl max-md:leading-normal max-lg:text-3xl max-lg:leading-normal max-xl:text-3xl max-xl:leading-normal leading-[10rem] uppercase text-[10rem]">
               Seja um amigo
             </h3>
-            <h3 className="text-black font-display uppercase text-6xl">
+            <h3 className="text-black font-display uppercase text-6xl max-md:text-3xl max-lg:text-3xl max-xl:text-3xl">
               Masp
             </h3>
           </div>
-          <div className="w-[96rem] h-fit bg-black pt-10 pr-10 pb-10 pl-5">
-            <h5 className="text-white font-display uppercase text-right text-3xl">
+          <div className="w-[96rem] h-fit max-md:w-full max-lg:w-full max-xl:w-full bg-black pt-10 pr-10 pb-10 pl-5">
+            <h5 className="text-white font-display max-md:text-2xl uppercase text-right max-md:text-left max-lg:text-left max-xl:text-left text-3xl">
               Apoie o museu e tenha acesso a uma programação cultural especial!
             </h5>
 
-            <p className="text-gray text-right p-2 mt-5 ml-20">
+            <p className="text-gray text-right p-2 mt-5 ml-20 max-md:text-1xl max-md:m-0 max-md:text-left max-lg:text-1xl max-lg:m-0 max-lg:text-left max-xl:text-1xl max-xl:m-0 max-xl:text-left">
               Apoie os projetos essenciais para o museu e tenha benefícios especiais, como entrada ilimitada e sem filas durante todo o ano, encontros com programação cultural, descontos no MASP Escola, Loja, Restaurante, entre outros.
             </p>
           </div>

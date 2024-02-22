@@ -50,12 +50,12 @@ export default function Timeline({
         }}>
           <div className="flex flex-col w-full items-start justify-center">
             <h2 className="font-light text-lg text-gray">Masp apresenta</h2>
-            <h1 className="text-2xl text-white font-display font-bold uppercase">{selectedItem.title}</h1>
+            <h1 className="text-2xl max-sm:text-lg text-white font-display font-bold uppercase">{selectedItem.title}</h1>
             <div className="flex flex-row gap-2 mt-5 mb-5">
               <span className="p-1 pl-2 pr-2 bg-primary font-bold text-white">{selectedItem.date}</span>
               <span className="p-1 pl-2 pr-2 uppercase bg-white font-bold text-black">{selectedItem.type}</span>
             </div>
-            <p className="text-white pr-20 mb-10 text-justify">{selectedItem.description}</p>
+            <p className="text-white max-sm:text-1xl pr-20 mb-10 text-justify">{selectedItem.description}</p>
 
             <Link href="/ingressos">
               <Button type="primary">
