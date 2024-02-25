@@ -1,4 +1,4 @@
-<strong>Link: </strong> <a>https://masp.vercel.app/</a>
+<strong>Link: </strong> <a href="https://masp.vercel.app" target="_blank">https://masp.vercel.app/</a>
 
 <img src="./preview.png" width="800px" />
 </br></br>
