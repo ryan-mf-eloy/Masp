@@ -16,6 +16,8 @@ O Museu de Arte de São Paulo, mais conhecido como MASP, é um dos mais importan
 - [Next.js](https://nextjs.org/): Framework React para criação de aplicações web.
 - [Typescript](https://www.typescriptlang.org/): Linguagem de programação digitada baseada em JavaScript, oferecendo melhores ferramentas em qualquer escala.
 - [Tailwind CSS](https://tailwindcss.com/): Framework CSS utilitário para estilização rápida e consistente.
+- [React Test Library + Vitest](https://tailwindcss.com/): Bibliotecas utilizadas para fazer os testes unitários. <b>
+(Testes ainda não implementados)
 
 ## Instalação e Uso
 

@@ -14,7 +14,7 @@ import item3Image from '../../../public/assets/images/masp-12.jpg'
 import item4Image from '../../../public/assets/images/masp-2.jpg'
 import item5Image from '../../../public/assets/images/masp-3.png'
 
-export default function Calendar() {
+export default function Schedule() {
   const APIResponseItems: TimelineItem[] = [
     {
       title: "GRAN FURY: ARTE NÃO É O BASTANTE",

@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 /**
  * Components
  */
@@ -34,7 +35,12 @@ export default function Header() {
 
       {
         open && (
-          <div className="bg-background z-20 max-md:flex hidden fixed top-0 left-0 bottom-0 right-0 p-5 max-md:pr-[3rem] max-md:pl-[3rem] flex-col item-center justify-start">
+          <motion.div
+            initial={{y: 100, opacity: 0 }}
+            animate={{y: 0, opacity: 1 }}
+            exit={{ y: 100, opacity: 0 }}
+            className="bg-background z-20 max-md:flex hidden fixed top-0 left-0 bottom-0 right-0 p-5 max-md:pr-[3rem] max-md:pl-[3rem] flex-col item-center justify-start"
+          >
             <div className="w-full flex flex-row justify-between items-center mb-12">
               <h6 className="xl:text-xl lg:text-lg font-semibold font-body uppercase">
                 {!formattedCurrentPage ? 'Home' : 'Masp'}
@@ -61,7 +67,7 @@ export default function Header() {
                 </Button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         )
       }
 

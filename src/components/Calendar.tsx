@@ -79,7 +79,7 @@ export default function Calendar({
   }, [initialCurrentMonthValue])
 
   return(
-    <div className="flex overflow-hidden flex-col items-center select-none justify-center w-fit border-2 p-5 pt-3 max-md:p-1">
+    <div className="flex overflow-hidden flex-col items-center select-none justify-center w-fit p-5 pt-3 max-md:p-1">
       <h3 className="text-2xl text-center uppercase font-bold w-fit pb-2 flex flex-row items-center justify-start">
         <MdArrowLeft
           onClick={() => handleCurrentMonth('prev')}
@@ -96,21 +96,21 @@ export default function Calendar({
         />
       </h3>
 
-      <div className="grid grid-cols-7 flex-row gap-2 text-center w-fit">
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">S</span>
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">T</span>
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Q</span>
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">Q</span>
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">S</span>
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">S</span>
-        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-28 h-8 font-bold font-display uppercase">D</span>
+      <div className="grid grid-cols-7 text-center w-full">
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">S</span>
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">T</span>
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">Q</span>
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">Q</span>
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">S</span>
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">S</span>
+        <span className="text-white max-md:text-[0.8rem] max-sm:w-10 max-md:w-12 max-lg:p-1 max-lg:w-16 flex items-center justify-center bg-primary w-full h-8 font-bold font-display uppercase">D</span>
       </div>
       
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
-        className="grid grid-cols-7 flex-row gap-2 text-center w-fit">
+        className="grid grid-cols-7 text-center w-fit">
         {
           allDaysFromCurrentMonth.map((date, index) => {
             const currentDay = date.getDate()
@@ -138,7 +138,7 @@ export default function Calendar({
                 exit={{ y: 100, opacity: 0 }}
                 key={index}
                 onClick={(event) => onDate(event, date)}
-                className={`hover:text-primary overflow-hidden bg-background hover:bg-primary hover:bg-opacity-5 hover:border-primary cursor-pointer p-10 border-2 border-foregorund flex text-3xl max-md:text-lg max-md:p-0 max-sm:w-10 max-sm:h-10 max-md:w-12 max-md:h-12 max-lg:text-2xl max-lg:p-5 max-lg:w-16 max-lg:h-16 items-center justify-center w-28 h-8 font-bold font-display uppercase ${selecteDateStyle}`}>
+                className={`hover:text-primary overflow-hidden bg-background hover:bg-primary hover:bg-opacity-5 hover:border-primary cursor-pointer p-10 border-2 border-foregorund flex text-3xl max-md:text-lg max-md:p-0 max-sm:w-10 max-sm:h-10 max-md:w-12 max-md:h-12 max-lg:text-2xl max-lg:p-5 max-lg:w-16 max-lg:h-16 items-center justify-center w-full max-h-20 font-bold font-display uppercase ${selecteDateStyle}`}>
                   {currentDay}
                 </motion.span>
               )
